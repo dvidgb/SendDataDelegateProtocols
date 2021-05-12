@@ -27,7 +27,7 @@
         <!--Primera Vista-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendDataDelegateProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PrimeraVista" customModule="SendDataDelegateProtocol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,21 +57,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-7t-GDo">
-                                <rect key="frame" x="276" y="141" width="42" height="21"/>
+                                <rect key="frame" x="252" y="141" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-fo-P8N">
-                                <rect key="frame" x="276" y="176" width="42" height="22"/>
+                                <rect key="frame" x="252" y="176" width="76" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwV-gs-CtL">
-                                <rect key="frame" x="276" y="213" width="42" height="22"/>
+                                <rect key="frame" x="252" y="213" width="120" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -98,7 +98,7 @@
                     <navigationItem key="navigationItem" title="Primera Vista" id="1k8-eq-vCR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="93v-W8-Cwn">
                             <connections>
-                                <segue destination="V8y-jc-gw2" kind="show" id="6Lp-7y-XTR"/>
+                                <segue destination="V8y-jc-gw2" kind="show" identifier="AddNuevo" id="6Lp-7y-XTR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="656.52173913043487" y="39.508928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Segunda Vista-->
         <scene sceneID="63l-9U-U9e">
             <objects>
-                <viewController id="V8y-jc-gw2" sceneMemberID="viewController">
+                <viewController id="V8y-jc-gw2" customClass="SegundaVista" customModule="SendDataDelegateProtocol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JCe-jI-dU7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,9 @@
                                 <rect key="frame" x="20" y="149" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textNameOutlet:" destination="Jvg-2R-mlY" eventType="editingDidEnd" id="357-bz-iiA"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njl-Eu-OFV">
                                 <rect key="frame" x="16" y="199" width="382" height="21"/>
@@ -142,6 +145,9 @@
                                 <rect key="frame" x="20" y="240" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textSurnameOutlet:" destination="Jvg-2R-mlY" eventType="editingDidEnd" id="Y13-As-w9K"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLl-gI-8q6">
                                 <rect key="frame" x="16" y="290" width="382" height="21"/>
@@ -153,10 +159,17 @@
                                 <rect key="frame" x="20" y="331" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textAgeOutlet:" destination="Jvg-2R-mlY" eventType="editingDidEnd" id="okr-PA-aT6"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TX-ah-56B">
                                 <rect key="frame" x="16" y="385" width="382" height="30"/>
                                 <state key="normal" title="Aceptar"/>
+                                <connections>
+                                    <action selector="SendDataAction:" destination="Jvg-2R-mlY" eventType="touchUpInside" id="vmQ-fo-gDQ"/>
+                                    <action selector="sendDataFirstView:" destination="V8y-jc-gw2" eventType="touchUpInside" id="Jjp-0y-kYg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i8O-Of-kR7"/>
@@ -186,8 +199,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cmz-fv-lmA"/>
+                    <connections>
+                        <outlet property="txtAgeOulet" destination="c8G-7t-4Mu" id="7AH-QJ-gzj"/>
+                        <outlet property="txtNameOutlet" destination="m1z-gX-6e4" id="CJR-PU-BuK"/>
+                        <outlet property="txtSurnameOutlet" destination="eRw-9I-YrL" id="Su6-mb-yxf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQc-xK-Pjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Jvg-2R-mlY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1581" y="34"/>
         </scene>
